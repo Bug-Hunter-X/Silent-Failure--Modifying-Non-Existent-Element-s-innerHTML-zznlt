@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    const element = document.getElementById('myDiv');
+    if(element) {
+      element.innerHTML = "This text replaces the original.";
+    } else {
+      console.error("Element not found!");
+    }
+    
+    //Example of handling a non existent element
+    const nonExistentElement = document.getElementById('nonExistentElement');
+    if(nonExistentElement){
+        nonExistentElement.innerHTML = "This will not be visible";
+    } else {
+        console.error("Element with id 'nonExistentElement' not found.");
+    }
+  </script>
+</body>
+</html>
